@@ -42,6 +42,11 @@ func main() {
 	cmnds.Register("register", commands.HandlerRegister)
 	cmnds.Register("reset", commands.HandleReset)
 	cmnds.Register("users", commands.HandleGetUsers)
+	cmnds.Register("agg", commands.HandleAgg)
+	cmnds.Register("addfeed", commands.HandleAddFeed)
+	cmnds.Register("feeds", commands.HandlePrintFeeds)
+	cmnds.Register("follow", commands.HandleFollowFeed)
+	cmnds.Register("following", commands.HandleFollowing)
 
 	args := os.Args
 
