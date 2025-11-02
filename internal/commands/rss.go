@@ -3,6 +3,7 @@ package commands
 import (
 	"context"
 	"encoding/xml"
+	"fmt"
 	"html"
 	"io"
 	"net/http"
@@ -33,6 +34,8 @@ func FetchFeed(ctx context.Context, feedURL string) (*RSSFeed, error) {
 	}
 
 	req.Header.Set("User-Agent", "gator");
+
+	fmt.Printf("fetching feed %v\n", feedURL);
 
 	client := &http.Client{}
 	res, err := client.Do(req);

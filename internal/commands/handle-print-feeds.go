@@ -12,6 +12,10 @@ func HandlePrintFeeds(s *State, cmd Command) error {
 		return fmt.Errorf("error getting feeds: %v", err)
 	}
 
+	if len(feeds) == 0 {
+		return fmt.Errorf("no feeds found");
+	}
+
 	for _, feed := range feeds {
 		fmt.Printf("name: %v\n", feed.Name)
 		fmt.Printf("URL: %v\n", feed.Url)
