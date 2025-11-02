@@ -38,8 +38,8 @@ func main() {
 		Options: map[string]func(*commands.State, commands.Command) error{},
 	}
 
-	cmnds.Register("login", commands.HandlerLogin)
-	cmnds.Register("register", commands.HandlerRegister)
+	cmnds.Register("login", commands.HandleLogin)
+	cmnds.Register("register", commands.HandleRegister)
 	cmnds.Register("reset", commands.HandleReset)
 	cmnds.Register("users", commands.HandleGetUsers)
 	cmnds.Register("agg", commands.HandleAgg)
